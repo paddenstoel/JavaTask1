@@ -1,4 +1,4 @@
-package ru.isys.trainings.task1;
+package ru.isys.trainings.homework1;
 
 import java.util.Scanner;
 
