@@ -11,18 +11,18 @@ public class Task5 {
 
         System.out.println(Arrays.toString(getSortedAndMergedArray(array, array2)));
 
-        int[] array3 = {5, 16, 9, 2, 3};
-        int[] array4 = {1, 3, 4, 5, 7, 0};
+        int[] array3 = {2, 3, 5, 9, 16};
+        int[] array4 = {0, 1, 3, 4, 5, 7};
 
         System.out.println(Arrays.toString(getSortedAndMergedArray(array3, array4)));
 
-        int[] array5 = {50, 160, -9, 22, 33, 0, 12, -19};
+        int[] array5 = {-19, -9, 0, 12, 22, 33, 50, 160};
         int[] array6 = {-1, 30};
 
         System.out.println(Arrays.toString(getSortedAndMergedArray(array5, array6)));
 
-        int[] array7 = {2, 5, 111, -85, 415};
-        int[] array8 = {333, 5, -98, 7};
+        int[] array7 = {-85, 2, 5, 111, 415};
+        int[] array8 = {-98, 5, 7, 333};
 
         System.out.println(Arrays.toString(getSortedAndMergedArray(array7, array8)));
 
