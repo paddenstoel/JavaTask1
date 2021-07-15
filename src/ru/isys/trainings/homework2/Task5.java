@@ -34,28 +34,31 @@ public class Task5 {
         int secondArray = anotherArray.length;
 
         int[] mergedBigArray = new int[firstArray + secondArray];
-        System.arraycopy(array, 0, mergedBigArray, 0, firstArray);
-        System.arraycopy(anotherArray, 0, mergedBigArray, array.length, secondArray);
 
-        sortArray(mergedBigArray);
+        int i = 0, j = 0;
+        for (int k = 0; k < mergedBigArray.length; k++) {
 
-        return mergedBigArray;
-
-    }
-
-    private static int[] sortArray(int[] array) {
-
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array.length - i - 1; j++) {
-                if (array[j + 1] < array[j]) {
-                    int swap = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = swap;
-                }
+            if (i > array.length - 1) {
+                int a = anotherArray[j];
+                mergedBigArray[k] = a;
+                j++;
+            } else if (j > anotherArray.length - 1) {
+                int a = array[i];
+                mergedBigArray[k] = a;
+                i++;
+            } else if (array[i] < anotherArray[j]) {
+                int a = array[i];
+                mergedBigArray[k] = a;
+                i++;
+            } else {
+                int b = anotherArray[j];
+                mergedBigArray[k] = b;
+                j++;
             }
+
         }
 
-        return array;
+        return mergedBigArray;
     }
 
 }
