@@ -15,19 +15,17 @@ public class Task1 {
     }
 
     public static String createGetter(String type, String fieldName) {
-        String code = "public " + type + " get" + checkFirstLetter(fieldName) + "() {\n\treturn this." + fieldName + ";\n}";
+        String code = "public " + type + " get" + makeBiggerFirstLetter(fieldName) + "() {\n\treturn this." + fieldName + ";\n}";
         return code;
     }
 
     public static String createSetter(String type, String fieldName) {
-        String code = "public " + type + " set" + checkFirstLetter(fieldName) + "(" + type + " " + fieldName + ") {\n\treturn this." + fieldName + ";\n}";
+        String code = "public " + type + " set" + makeBiggerFirstLetter(fieldName) + "(" + type + " " + fieldName + ") {\n\treturn this." + fieldName + ";\n}";
         return code;
     }
 
-    private static String checkFirstLetter(String str) {
-        char[] arr = str.toCharArray();
-        char firstCharacter = arr[0];
-        return String.valueOf(firstCharacter).toUpperCase() + str.substring(1);
+    private static String makeBiggerFirstLetter(String str) {
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 
 }
