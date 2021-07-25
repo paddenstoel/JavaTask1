@@ -22,5 +22,16 @@ public class Computer {
             this.ram = ram;
         }
 
+        public String getOs() {
+            return os;
+        }
+
+        public String getCpu() {
+            return cpu;
+        }
+
+        public String getRam() {
+            return ram;
+        }
     }
 }
