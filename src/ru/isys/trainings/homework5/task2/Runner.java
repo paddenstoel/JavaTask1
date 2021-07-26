@@ -14,7 +14,7 @@ public class Runner {
         LocalTime departure = LocalTime.of(04, 30);
 
         airline.setDepartureTime(departure);
-        
+
         DayOfWeek[] daysOfWeekArr = new DayOfWeek[2];
         daysOfWeekArr[0] = DayOfWeek.SUNDAY;
         daysOfWeekArr[1] = DayOfWeek.MONDAY;
