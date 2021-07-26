@@ -21,7 +21,17 @@ public class ArrayManipulation {
     }
 
     private static boolean isRightStructure(String[][] arr) {
-        return arr.length == 4 && arr[0].length == 4 && arr[1].length == 4 && arr[2].length == 4 && arr[3].length == 4;
-    }
+        int dimension = 4;
 
+        if (arr.length != dimension) {
+            return false;
+        }
+
+        for (String[] strings : arr) {
+            if (strings.length != dimension) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
