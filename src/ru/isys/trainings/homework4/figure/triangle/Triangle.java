@@ -2,7 +2,9 @@ package ru.isys.trainings.homework4.figure.triangle;
 
 import ru.isys.trainings.homework4.figure.Figure;
 
-public abstract class Triangle implements Figure {
+import java.util.Comparator;
+
+public abstract class Triangle implements Figure, Comparable<Triangle> {
 
     protected double firstLength;
     protected double secondLength;
@@ -27,5 +29,17 @@ public abstract class Triangle implements Figure {
     public double calculateArea() {
         double radianAngle = (Math.PI * angle) / 180.0;
         return 0.5 * firstLength * secondLength * Math.sin(radianAngle);
+    }
+
+    @Override
+    public int compareTo(Triangle triangle) {
+        return Double.compare(calculatePerimeter(), triangle.calculatePerimeter());
+    }
+
+    public static class TriangleComparator implements Comparator<Triangle> {
+        @Override
+        public int compare(Triangle one, Triangle two) {
+            return Double.compare(one.calculateArea(), two.calculateArea());
+        }
     }
 }
