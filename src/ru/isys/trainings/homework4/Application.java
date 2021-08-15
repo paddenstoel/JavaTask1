@@ -142,7 +142,7 @@ public class Application {
         public static void printTreeMapInfo(Map<Double, Rectangle> tree) {
             System.out.println("\nTreeMap Rectangle's Info: \n");
             for (Map.Entry<Double, Rectangle> e : tree.entrySet()) {
-                System.out.println(e.getKey() + "\t\t" + e.getValue());
+                System.out.println("Perimeter of " + e.getValue() + " is " + e.getKey());
             }
         }
 
