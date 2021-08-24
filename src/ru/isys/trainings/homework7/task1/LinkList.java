@@ -25,7 +25,6 @@ public class LinkList<T> {
 
     private class ListIterator implements Iterator<T> {
 
-        private LinkList.ListItem<T> lastReturned;
         private LinkList.ListItem<T> next;
         private int nextIndex;
 
@@ -44,7 +43,7 @@ public class LinkList<T> {
             if (!hasNext())
                 throw new NoSuchElementException();
 
-            lastReturned = next;
+            ListItem<T> lastReturned = next;
             next = next.next;
             nextIndex++;
             return lastReturned.data;
