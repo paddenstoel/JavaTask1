@@ -187,5 +187,5 @@ public class Main {
         long estimatedTimeLink = System.nanoTime() - startTimeLink;
         System.out.println("Время для LinkedList: " + estimatedTimeLink);
     }
-    
+
 }

@@ -2,8 +2,6 @@ package ru.isys.trainings.homework7.task2;
 
 import ru.isys.trainings.homework7.task1.LinkList;
 
-import java.util.Iterator;
-
 public class HashedMap<K, V> {
 
     private final static int INITIAL_CAPACITY = 16;
@@ -74,6 +72,7 @@ public class HashedMap<K, V> {
             return;
         }
         for (MapItem<K, V> mapItem : buckets[bucketIndex]) {
+            if (itemIndex == -1) itemIndex = 0;
             if (key.hashCode() == mapItem.getHash()) {
                 if (key.equals(mapItem.getKey())) {
                     break;
@@ -84,7 +83,6 @@ public class HashedMap<K, V> {
         if (itemIndex != -1) {
             buckets[bucketIndex].remove(itemIndex);
         }
-
     }
 
     public int size() {
@@ -149,7 +147,6 @@ public class HashedMap<K, V> {
         return null;
     }
 
-
     private class MapItem<K, V> {
         final int hash;
         final K key;
@@ -177,7 +174,6 @@ public class HashedMap<K, V> {
             this.value = value;
         }
     }
-    
 }
 
 
